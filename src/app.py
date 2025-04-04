@@ -38,7 +38,31 @@ def handle_hello():
 
     return jsonify(response_body), 200
 
-# this only runs if `$ python src/app.py` is executed
+
+@app.route('/members', methods=['POST'])
+def add_member():
+    body = request.json
+    members = jackson_family.add_member(body)
+    print(body, "here is bodyyy!!")
+    return jsonify("member added successfully"), 200
+
+ 
+
+# POST /member
+
+# REQUEST BODY (content_type: application/json):
+# {
+#         id: Int,
+#         first_name: String,
+#         age: Int,
+#         lucky_numbers: []
+# }
+
+# RESPONSE (content_type: application/json):
+
+# status_code: 200 if success. 400 if a bad request (wrong info). 500 if the server encounters an error
+
+# # this only runs if `$ python src/app.py` is executed
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT', 3000))
     app.run(host='0.0.0.0', port=PORT, debug=True)
