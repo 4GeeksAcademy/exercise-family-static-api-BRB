@@ -28,13 +28,15 @@ class FamilyStructure:
         # fill this method and update the return
         pass
 
-    def get_member(self, id):
+    def get_member(self, urlID):
         # fill this method and update the return
         members_list = self._members
-        for item in members_list:
-            member_id = item["id"]
-            if condition:
-            
+        print(type(member_id, "memberID type!!!!"))
+        for member_object in members_list:
+            member_id = member_object["id"]
+            print(type(member_id, "memberID type!!!!"))
+            if urlID == member_id:
+                return member_object
             pass
     
 

@@ -52,7 +52,7 @@ def get_member():
     # }
 
 
-    return jsonify(), 200
+    return jsonify(members), 200
 
 
 @app.route('/members', methods=['POST'])
