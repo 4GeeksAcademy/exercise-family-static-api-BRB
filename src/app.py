@@ -41,11 +41,11 @@ def handle_hello():
 
 
 # GET /member/<int:member_id>
-@app.route('/member', methods=['GET'])
-def get_member():
+@app.route('/members/<int:id>', methods=['GET'])
+def get_member(id):
 
     # this is how you can use the Family datastructure by calling its methods
-    members = jackson_family.get_member()
+    members = jackson_family.get_member(id)
     # response_body = {
     #     "message": "member received successfully",
     #     "family": members

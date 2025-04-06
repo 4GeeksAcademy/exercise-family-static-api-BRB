@@ -28,18 +28,25 @@ class FamilyStructure:
         # fill this method and update the return
         pass
 
-    def get_member(self, urlID):
+    def get_member(self, id):
+        for member in self._members:
+            if member["id"] == id:
+                return member
+            else: print("ERROR, CANNOT RETRIEVE MEMBER")
         # fill this method and update the return
-        members_list = self._members
-        print(type(member_id, "memberID type!!!!"))
-        for member_object in members_list:
-            member_id = member_object["id"]
-            print(type(member_id, "memberID type!!!!"))
-            if urlID == member_id:
-                return member_object
-            pass
+        # members_list = self._members
+        # print(type(member_id, "memberID type!!!!"))
+        # for member_object in members_list:
+        #     member_id = member_object["id"]
+        #     print(type(member_id, "memberID type!!!!"))
+        #     if urlID == member_id:
+        #         return member_object
+        #     pass
     
 
     # this method is done, it returns a list with all the family members
     def get_all_members(self):
         return self._members
+
+# find additional projects to build i.e youtube projects
+# 4geeks projects section with project ideas to practice with 
