@@ -28,7 +28,7 @@ class FamilyStructure:
         # fill this method and update the return
         for member in self._members:
             if member["id"] == id:
-                self._members.remove(member)
+                self._members.remove(id)
             
         # pass
 

@@ -66,6 +66,7 @@ def add_member():
 
 @app.route('/members/<int:id>', methods=['DELETE'])
 def delete_member(id):
+    print(id, "here is the deleted member!!")
     return jsonify("member deleted successfully"), 200
 
 
